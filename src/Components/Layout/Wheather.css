@@ -1,0 +1,106 @@
+body {
+    height: 100vh;
+    background: #52a5db;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #9edbffce, #38a8f2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #9edbffce,#38a8f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 60px;
+    padding-top: 30px;
+}
+
+
+.header h1 {
+    font-size: 48px;
+    margin-bottom: 5px;
+}
+
+.header span {
+    font-size: 24px;
+    opacity: .7;
+}
+
+.header h1, span {
+    font-weight: 300;
+}
+
+.wheather-conditions-container {
+    padding: 2.5rem;
+}
+
+.wheather-conditions-container .wheather-condition {
+    display: flex;
+    align-items: center;
+}
+
+.wheather-conditions-container .wheather-condition-description {
+    font-size: 44px;
+    margin-left: 20px;
+}
+
+.wheather-temperature {
+    padding: 1.4rem 1.4rem 0 0;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wheather-temperature .temperature {
+    font-weight: 100;
+    font-size: 144px;
+    
+}
+
+.wheather-temperature .max-min-temperature {
+    position: relative;
+    bottom: 0;
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25px;
+    padding-top: 1.8rem;
+}
+
+.wheather-temperature .max-min-temperature .max, .min {
+    font-weight: 100;
+    font-size: 30px;
+}
+
+
+.forecast {
+    max-width: 400px;
+    min-width: 400px;
+    margin-top: 1.4rem;
+    padding-left: 25px;
+}
+
+.forecast .day {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 30px 0;
+}
+
+.forecast .wheather-condition-icon {
+    margin-right: 10px;
+    height: 24px;
+}
+
+.forecast .wheather-condition {
+    font-size: 18px;
+}
+
+.forecast .temperature {
+    margin-left: auto;
+    margin-right: 30px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
