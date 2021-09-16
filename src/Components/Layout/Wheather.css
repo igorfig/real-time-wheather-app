@@ -1,9 +1,11 @@
-body {
-    height: 100vh;
-    background: #52a5db;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #9edbffce, #38a8f2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #9edbffce,#38a8f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+.wheather {
+    max-width: 400px;
+    min-width: 400px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
 .header {
@@ -15,6 +17,12 @@ body {
     padding-top: 30px;
 }
 
+@media (min-width: 768px) {
+    .header {
+        margin-bottom: 30px;
+        padding-top: 20px;
+    }
+}
 
 .header h1 {
     font-size: 48px;
@@ -32,6 +40,13 @@ body {
 
 .wheather-conditions-container {
     padding: 2.5rem;
+    padding-bottom: 1.4rem;
+}
+
+@media (min-width: 768px) {
+    .wheather-conditions-container {
+        padding-bottom: 0;
+    }
 }
 
 .wheather-conditions-container .wheather-condition {
@@ -79,6 +94,12 @@ body {
     min-width: 400px;
     margin-top: 1.4rem;
     padding-left: 25px;
+}
+
+@media (min-width: 768px) {
+    .forecast {
+        margin-bottom: .8rem;
+    }
 }
 
 .forecast .day {

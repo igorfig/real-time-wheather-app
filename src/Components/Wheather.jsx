@@ -37,17 +37,17 @@ function Wheather(props) {
             <div className="forecast">
                 <div className="day0 day">
                     <img src="./assets/moon.svg" alt="sun icon" className="wheather-condition-icon"/>
-                    <span class="wheather-condition">Hoje • Limpo</span>
-                    <span class="temperature">32° / 15°</span>
+                    <span className="wheather-condition">Hoje • Limpo</span>
+                    <span className="temperature">32° / 15°</span>
                 </div>
                 <div className="day1 day">
                     <img src="./assets/sun.png" alt="sun icon" className="wheather-condition-icon"/>
-                    <span class="wheather-condition">Ter • Limpo</span>
-                    <span class="temperature">33° / 16°</span></div>
+                    <span className="wheather-condition">Ter • Limpo</span>
+                    <span className="temperature">33° / 16°</span></div>
                 <div className="day2 day">
                     <img src="./assets/sun.png" alt="sun icon" className="wheather-condition-icon"/>
-                    <span class="wheather-condition">Qua • Chuva</span>
-                    <span class="temperature">22° / 15°</span>
+                    <span className="wheather-condition">Qua • Chuva</span>
+                    <span className="temperature">22° / 15°</span>
                 </div> 
             </div>
         </div>

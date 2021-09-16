@@ -9,4 +9,14 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: white;
+    
+}
+
+.App {
+    min-height: 100vh;
+    overflow: auto;
+    overflow-x: hidden;
+    background: #52a5db;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #9edbffce, #38a8f2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #9edbffce,#38a8f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
