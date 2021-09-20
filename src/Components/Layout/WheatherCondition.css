@@ -1,0 +1,49 @@
+.wheather-conditions-container {
+    padding: 2.5rem;
+    padding-bottom: 1.4rem;
+}
+
+@media (min-width: 768px) {
+    .wheather-conditions-container {
+        padding-bottom: 0;
+    }
+}
+
+.wheather-conditions-container .wheather-condition {
+    display: flex;
+    align-items: center;
+}
+
+.wheather-conditions-container .wheather-condition-description {
+    font-size: 44px;
+    margin-left: 12px;
+}
+
+.wheather-temperature {
+    padding: 1.4rem 1.4rem 0 0;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wheather-temperature .temperature {
+    font-weight: 100;
+    font-size: 144px;
+    
+}
+
+.wheather-temperature .max-min-temperature {
+    position: relative;
+    bottom: 0;
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25px;
+    padding-top: 1.8rem;
+}
+
+.wheather-temperature .max-min-temperature .max, .min {
+    font-weight: 100;
+    font-size: 30px;
+}
