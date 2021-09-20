@@ -14,9 +14,45 @@ body {
 
 .App {
     min-height: 100vh;
-    overflow: auto;
     overflow-x: hidden;
-    background: #52a5db;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #9edbffce, #38a8f2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #9edbffce,#38a8f2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+} 
+
+
+.wheather {
+    max-width: 400px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    user-select: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 60px;
+    padding-top: 30px;
+}
+
+@media (min-width: 768px) {
+    .header {
+        margin-bottom: 30px;
+        padding-top: 20px;
+    }
+}
+
+.header h1 {
+    font-size: 48px;
+    margin-bottom: 5px;
+}
+
+.header span {
+    font-size: 18px;
+    opacity: .7;
+}
+
+.header h1, span {
+    font-weight: 300;
 }
