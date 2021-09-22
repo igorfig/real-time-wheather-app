@@ -114,9 +114,6 @@ function App() {
   const { icon, gradient, description } = getCurrent();
   const { day, dayOfWeek, month } = getDate(timestamp)
   
-  function navigation() {
-    navigator.geolocation.getCurrentPosition(location => console.log(location))
-  }
     return (
     <div className="App Skeleton" style={gradient}>
       { loading ? 
