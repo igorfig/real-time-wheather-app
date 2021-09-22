@@ -30,32 +30,32 @@ body {
     user-select: none;
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    margin-bottom: 60px;
-    padding-top: 30px;
-}
 
 @media (min-width: 768px) {
-    .header {
+    .info {
         margin-bottom: 30px;
-        padding-top: 20px;
     }
 }
 
-.header h1 {
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.info h1 {
     font-size: 48px;
     margin-bottom: 5px;
 }
 
-.header span {
+.info span {
     font-size: 18px;
     opacity: .7;
 }
 
-.header h1, span {
+.info h1, span {
     font-weight: 300;
 }

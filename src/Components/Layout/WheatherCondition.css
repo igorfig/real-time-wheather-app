@@ -58,6 +58,5 @@
 .fade-out {
     opacity: 0;
     margin-bottom: 3rem;
-
     transition: all .5s ease;
 }

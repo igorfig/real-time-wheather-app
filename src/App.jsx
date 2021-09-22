@@ -114,16 +114,19 @@ function App() {
   const { icon, gradient, description } = getCurrent();
   const { day, dayOfWeek, month } = getDate(timestamp)
   
-  return (
+  function navigation() {
+    navigator.geolocation.getCurrentPosition(location => console.log(location))
+  }
+    return (
     <div className="App Skeleton" style={gradient}>
       { loading ? 
           <SyncLoader color={'#fff'} loading={loading} size={25} />
         :
 
         <div className="wheather">
-            <div className="header">
-                <h1 className="city-name">{current.city}</h1>
-                <span>{dayOfWeek}, {day} de {month}</span>
+            <div className="info">
+              <h1 className="city-name">{current.city}</h1>
+              <span>{dayOfWeek}, {day} de {month}</span>
             </div>
 
             <WheatherCondition 
