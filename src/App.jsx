@@ -4,10 +4,11 @@ import WheatherCondition from "./Components/WheatherCondition";
 import Forecast from "./Components/Forecast";
 import Details from "./Components/Details";
 import Wheather from './data/Wheather';
+import SyncLoader from "react-spinners/SyncLoader";
 
 
 function App() {
-  const { current } = Wheather();
+  const { current, loading } = Wheather();
 
   const timestamp = current.dt
 
@@ -115,7 +116,11 @@ function App() {
   
   return (
     <div className="App Skeleton" style={gradient}>
-      <div className="wheather">
+      { loading ? 
+          <SyncLoader color={'#fff'} loading={loading} size={25} />
+        :
+
+        <div className="wheather">
             <div className="header">
                 <h1 className="city-name">{current.city}</h1>
                 <span>{dayOfWeek}, {day} de {month}</span>
@@ -137,6 +142,8 @@ function App() {
 
            
         </div>
+      
+      }
     </div>
   );
 }
