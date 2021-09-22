@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './Layout/WheatherCondition.css'
 
 function WheatherCondition(props) {
+    const [fade, setFade] = useState(false)
+
+    const controlFade = () => {
+        if(window.scrollY < 100) {
+            setFade(false)
+        } else {
+            setFade(true)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', controlFade)
+
+        return () => window.removeEventListener('scroll', controlFade)
+    })
+
     return (
-        <div className="wheather-conditions-container">
+        <div className={`wheather-conditions-container ${fade && 'fade-out'}`}>
                <div className="wheather-condition">
                 <img style={{
                     width: '48px',
