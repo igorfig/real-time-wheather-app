@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-
-
 const axios = require('axios');
 
 function Wheather(props) {
     const [ current, setCurrent ] = useState({});
     const [ forecast, setForecast ] = useState([]);
+
+    const [ loading, setLoading ] = useState(false);
 
     const key = "5dff8c14d3c0494c0f7f9c9213481d21"
 
@@ -36,8 +36,10 @@ function Wheather(props) {
     
 
     useEffect(() => {
+        setLoading(true);
         async function getWheather(latitude, longitude, city) {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric&lang=pt_br`)
+        
         const data = response.data
 
         setCurrent({
@@ -78,7 +80,10 @@ function Wheather(props) {
             }
         
         ])
+
+        setLoading(false)
         
+
         }
         getLat_LonValues("itabira").then(response => getWheather(response.latitude, response.longitude, response.city_name))
     
@@ -86,7 +91,8 @@ function Wheather(props) {
 
     return {
         current,
-        forecast
+        forecast,
+        loading
     }
 }
 

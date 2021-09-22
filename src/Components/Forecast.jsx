@@ -10,8 +10,6 @@ function Forecast(props) {
 
     forecastDescriptions.splice(0, 1);
 
-
-
     const description =  forecastDescriptions.map(description => {
         let descriptionFormated = []
         let icons = []
