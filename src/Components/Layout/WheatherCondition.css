@@ -1,8 +1,6 @@
 .wheather-conditions-container {
     padding: 2.5rem;
     padding-bottom: 1.4rem;
-    transition-timing-function: ease-in;
-    transition: 0.5s;
 }
 
 @media (min-width: 768px) {
@@ -48,26 +46,4 @@
 .wheather-temperature .max-min-temperature .max, .min {
     font-weight: 100;
     font-size: 30px;
-}
-
-.fade-in {
-    opacity: 1;
-    transition: opacity .5s ease;
-}
-
-.fade-out {
-    opacity: 0;
-    margin-bottom: 3rem;
-
-    transition: all .5s ease;
-}
-
-.display-none {
-    display: none;
-    transition: display .5s ease-in;
-}
-
-.display {
-    display: flex;
-    transition: display .5 ease-in;
 }

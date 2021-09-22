@@ -4,13 +4,10 @@ import WheatherCondition from "./Components/WheatherCondition";
 import Forecast from "./Components/Forecast";
 import Details from "./Components/Details";
 import Wheather from './data/Wheather';
-import SyncLoader from "react-spinners/SyncLoader";
 
 
 function App() {
-  const { current, loading } = Wheather();
-
-  console.log(current)
+  const { current } = Wheather();
 
   const timestamp = current.dt
 
@@ -118,40 +115,28 @@ function App() {
   
   return (
     <div className="App Skeleton" style={gradient}>
-      {
-        loading ? 
-        <SyncLoader
-        color={'#fff'} 
-        loading={loading} 
-        size={20} />
+      <div className="wheather">
+            <div className="header">
+                <h1 className="city-name">{current.city}</h1>
+                <span>{dayOfWeek}, {day} de {month}</span>
+            </div>
 
-        :
-        
-        <div className="wheather">
-          <div className="header">
-              <h1 className="city-name">{current.city}</h1>
-              <span>{dayOfWeek}, {day} de {month}</span>
-          </div>
+            <WheatherCondition 
+              temp={Number(current.temp).toFixed(0)}
+              max={Number(current.max).toFixed(0)}
+              min={Number(current.min).toFixed(0)}
+              icon={icon}
+              description={description.charAt(0).toUpperCase() + description.slice(1)}
+              />
 
-          <WheatherCondition 
-            temp={Number(current.temp).toFixed(0)}
-            max={Number(current.max).toFixed(0)}
-            min={Number(current.min).toFixed(0)}
-            icon={icon}
-            description={description.charAt(0).toUpperCase() + description.slice(1)}
-            />
+            <Forecast 
+              icon={icon} 
+              description={description}
+              />
+            <Details />
 
-          <Forecast 
-            icon={icon} 
-            description={description}
-            />
-          <Details />
-
-        
+           
         </div>
-      
-    }
-
     </div>
   );
 }
