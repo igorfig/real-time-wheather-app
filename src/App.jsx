@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import WheatherCondition from "./Components/WheatherCondition";
+import WeatherCondition from "./Components/WeatherCondition";
 import Forecast from "./Components/Forecast";
 import Details from "./Components/Details";
-import Wheather from './data/Wheather';
+import Weather from './data/Weather';
 import SyncLoader from "react-spinners/SyncLoader";
 
 
 function App() {
-  const { current, loading } = Wheather();
+  const { current, loading } = Weather();
 
   const timestamp = current.dt
 
@@ -120,13 +120,13 @@ function App() {
           <SyncLoader color={'#fff'} loading={loading} size={25} />
         :
 
-        <div className="wheather">
+        <div className="weather">
             <div className="info">
               <h1 className="city-name">{current.city}</h1>
               <span>{dayOfWeek}, {day} de {month}</span>
             </div>
 
-            <WheatherCondition 
+            <WeatherCondition 
               temp={Number(current.temp).toFixed(0)}
               max={Number(current.max).toFixed(0)}
               min={Number(current.min).toFixed(0)}

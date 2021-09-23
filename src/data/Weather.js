@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 
 const axios = require('axios');
 
-function Wheather(props) {
+function Weather(props) {
     const [ current, setCurrent ] = useState({});
     const [ forecast, setForecast ] = useState([]);
     const [ loading, setLoading ] = useState(false);
 
-    const key = "5dff8c14d3c0494c0f7f9c9213481d21"
+    const key = process.env.REACT_APP_WEATHER_API_KEY;
 
     function formatDate(isSunrise,timestamp) {
         const date = new Date(timestamp)
@@ -87,4 +87,4 @@ function Wheather(props) {
     }
 }
 
-export default Wheather
+export default Weather

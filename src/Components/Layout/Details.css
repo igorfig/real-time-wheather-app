@@ -35,26 +35,26 @@
     background: rgb(245,197,37);
 }
 
-.wheather-details {
+.weather-details {
     padding: 1.4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 1rem;
 }
 
-.wheather-details div{
+.weather-details div{
     display: flex;
     flex-direction: column;
 }
 
-.wheather-details div .title {
+.weather-details div .title {
     font-weight: 300;
     font-size: .8rem;
     opacity: .6;
     margin-bottom: .4rem;
 }
 
-.wheather-details div .content {
+.weather-details div .content {
     font-weight: 500;
     font-size: 1.2rem;
 }
