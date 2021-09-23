@@ -1,9 +1,9 @@
 import React from "react";
 import './Layout/Details.css'
-import Wheather from "../data/Wheather";
+import Weather from "../data/Weather";
 
 function Details(props) {
-    const { current } = Wheather();
+    const { current } = Weather();
 
    return (
         <div className="details">
@@ -27,7 +27,7 @@ function Details(props) {
                 </div>
             </div>
 
-            <div className="wheather-details">
+            <div className="weather-details">
                 <div className="feels-like">
                     <span className="title">Sensação</span>
                     <span className="content">{Number(current.feels_like).toFixed(1)}°C</span>

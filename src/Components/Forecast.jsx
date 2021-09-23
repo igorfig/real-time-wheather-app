@@ -1,10 +1,10 @@
 import React from "react";
 import './Layout/Forecast.css'
-import Wheather from "../data/Wheather";
+import Weather from "../data/Weather";
 
 
 function Forecast(props) {
-    const { forecast } = Wheather();
+    const { forecast } = Weather();
 
     const forecastDescriptions = forecast.map(data => data.description);
 
@@ -63,8 +63,8 @@ function Forecast(props) {
         <div className="forecast">
            {forecast.map((data, i) => (
                 <div className="day" key={i}>
-                    <img src={i === 0 ? props.icon : description[i - 1].icons} alt="ícone clima" className="wheather-condition-icon"/>
-                    <span className="wheather-condition">{i >= 1 && i <= 2 ? formatDate(timestamp[i]) : 'Hoje'} • {i === 0 ? props.description : description[i -1].descriptionFormated}</span>
+                    <img src={i === 0 ? props.icon : description[i - 1].icons} alt="ícone clima" className="weather-condition-icon"/>
+                    <span className="weather-condition">{i >= 1 && i <= 2 ? formatDate(timestamp[i]) : 'Hoje'} • {i === 0 ? props.description : description[i -1].descriptionFormated}</span>
                     <span className="temperature">{data.max.toFixed(0)}° / {data.min.toFixed(0)}°</span>
                 </div>
            ))}

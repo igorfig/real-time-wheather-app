@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import './Layout/WheatherCondition.css'
+import './Layout/WeatherCondition.css'
 
-function WheatherCondition(props) {
+function WeatherCondition(props) {
     const [fade, setFade] = useState(false)
 
     const controlFade = () => {
@@ -19,16 +19,16 @@ function WheatherCondition(props) {
     })
 
     return (
-        <div className={`wheather-conditions-container ${fade && 'fade-out'}`}>
-               <div className="wheather-condition">
+        <div className={`weather-conditions-container ${fade && 'fade-out'}`}>
+               <div className="weather-condition">
                 <img style={{
                     width: '48px',
                     height: '48px'
-                }} src={props.icon} alt="rain icon" className="wheather-condition-icon"/>
-                    <span className="wheather-condition-description">{props.description}</span>
+                }} src={props.icon} alt="rain icon" className="weather-condition-icon"/>
+                    <span className="weather-condition-description">{props.description}</span>
                </div>
 
-               <div className="wheather-temperature">
+               <div className="weather-temperature">
                     <span className="temperature">{props.temp}°</span>      
                     <div className="max-min-temperature">
                         <span className="max">{props.max}°C</span>
@@ -45,4 +45,4 @@ function WheatherCondition(props) {
     )
 }
 
-export default WheatherCondition
+export default WeatherCondition

@@ -1,4 +1,4 @@
-.wheather-conditions-container {
+.weather-conditions-container {
     padding: 2.5rem;
     padding-bottom: 1.4rem;
     transition-timing-function: ease-in;
@@ -6,35 +6,35 @@
 }
 
 @media (min-width: 768px) {
-    .wheather-conditions-container {
+    .weather-conditions-container {
         padding-bottom: 0;
     }
 }
 
-.wheather-conditions-container .wheather-condition {
+.weather-conditions-container .weather-condition {
     display: flex;
     align-items: center;
 }
 
-.wheather-conditions-container .wheather-condition-description {
+.weather-conditions-container .weather-condition-description {
     font-size: 44px;
     margin-left: 12px;
 }
 
-.wheather-temperature {
+.weather-temperature {
     padding: 1.4rem 1.4rem 0 0;    
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.wheather-temperature .temperature {
+.weather-temperature .temperature {
     font-weight: 100;
     font-size: 144px;
     
 }
 
-.wheather-temperature .max-min-temperature {
+.weather-temperature .max-min-temperature {
     position: relative;
     bottom: 0;
     top: auto;
@@ -45,7 +45,7 @@
     padding-top: 1.8rem;
 }
 
-.wheather-temperature .max-min-temperature .max, .min {
+.weather-temperature .max-min-temperature .max, .min {
     font-weight: 100;
     font-size: 30px;
 }

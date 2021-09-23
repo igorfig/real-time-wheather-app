@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 
 const axios = require('axios');
 
-function Wheather(props) {
+function Weather() {
     const [ current, setCurrent ] = useState({});
     const [ forecast, setForecast ] = useState([]);
     const [ loading, setLoading ] = useState(false);
 
-    const key = "5dff8c14d3c0494c0f7f9c9213481d21"
+    const key = process.env.REACT_APP_WEATHER_API_KEY;
 
     function formatDate(isSunrise,timestamp) {
         const date = new Date(timestamp)
@@ -24,7 +24,7 @@ function Wheather(props) {
 
     useEffect(() => {
         setLoading(true);
-        async function getWheather(latitude, longitude) {
+        async function getWeather(latitude, longitude) {
             const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric&lang=pt_br`)
             const data = response.data
 
@@ -72,13 +72,17 @@ function Wheather(props) {
 
             setLoading(false)
             
-    }
+        }
 
-    navigator.geolocation.getCurrentPosition(location => {
-        getWheather(location.coords.latitude, location.coords.longitude)
-    })
     
-    // getLat_LonValues("itabira").then(response => getWheather(response.latitude, response.longitude, response.city_name))
+        navigator.geolocation.getCurrentPosition(location => {
+            getWeather(location.coords.latitude, location.coords.longitude)
+        })
+        
+        return () => { 
+            setCurrent({})
+            setForecast({})
+        };
 }, [])
 
     return {
@@ -88,4 +92,4 @@ function Wheather(props) {
     }
 }
 
-export default Wheather
+export default Weather
