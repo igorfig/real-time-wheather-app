@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-
-
 const axios = require('axios');
 
 function Weather() {
+
     const [ current, setCurrent ] = useState({});
     const [ forecast, setForecast ] = useState([]);
     const [ loading, setLoading ] = useState(false);
@@ -75,14 +74,16 @@ function Weather() {
         }
 
     
+
         navigator.geolocation.getCurrentPosition(location => {
             getWeather(location.coords.latitude, location.coords.longitude)
         })
         
         return () => { 
             setCurrent({})
-            setForecast({})
+            setForecast([])
         };
+
 }, [])
 
     return {
