@@ -78,7 +78,6 @@ function Wheather(props) {
         getWheather(location.coords.latitude, location.coords.longitude)
     })
     
-    // getLat_LonValues("itabira").then(response => getWheather(response.latitude, response.longitude, response.city_name))
 }, [])
 
     return {
