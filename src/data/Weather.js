@@ -7,7 +7,7 @@ function Weather() {
     const [ forecast, setForecast ] = useState([]);
     const [ loading, setLoading ] = useState(false);
 
-    const key = process.env.REACT_APP_WEATHER_API_KEY;
+    const key = "425d5fceb77cdf89fdbd1c3004a85754";
 
     function formatDate(isSunrise,timestamp) {
         const date = new Date(timestamp)
