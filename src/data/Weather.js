@@ -84,7 +84,7 @@ function Weather() {
             setForecast([])
         };
 
-}, [])
+}, [key])
 
     return {
         current,
