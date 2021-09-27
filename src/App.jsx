@@ -95,7 +95,7 @@ function App() {
         }
         description = 'Parcialmente nublado'
     } 
-    if (currentDescription === 'chuva leve') {
+    if (currentDescription === 'chuva leve' || currentDescription === 'chuva moderada') {
       icon = './assets/rain.svg'
       gradient = {
         'backgroundColor': 'rgb(163,187,201)',

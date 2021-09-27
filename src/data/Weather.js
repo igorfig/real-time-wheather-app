@@ -24,6 +24,7 @@ function Weather() {
     useEffect(() => {
         setLoading(true);
         async function getWeather(latitude, longitude) {
+            console.log(latitude, longitude);
             const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric&lang=pt_br`)
             const data = response.data
 
